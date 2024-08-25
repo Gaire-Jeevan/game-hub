@@ -15,7 +15,7 @@ const useGenres = () =>
     queryKey: ["genres"],
     queryFn: apiClient.getAll,
     staleTime: 24 * 60 * 60 * 1000, // 24h
-    initialData: { count: genres.length, results: genres }, // this is static data that we store in separate component as genre will not change over time
+    initialData: genres // this is static data that we store in separate component as genre will not change over time
   });
 
 export default useGenres;

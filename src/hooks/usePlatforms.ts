@@ -12,7 +12,7 @@ export interface Platform {
 
 const usePlatform = () =>
   useQuery({
-    queryKey: ["platform"],
+    queryKey: ["platforms"],
     queryFn: apiClient.getAll,
     initialData: { count: platforms.length, results: platforms },
     staleTime: 24 * 60 * 60 * 1000,
